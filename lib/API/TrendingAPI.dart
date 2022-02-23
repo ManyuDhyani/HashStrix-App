@@ -2,11 +2,11 @@ import 'package:hashstrix_app/Models/BlogModel.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
-class BlogData {
-  String baseURL = "https://hashstrix.com/api/blogs/";
+class TrendingData {
+  String baseURL = "https://hashstrix.com/api/trending/";
 
-  Future<List> getAllBlogs() async {
-    List<Blogs> BlogList = [];
+  Future<List> getTrendingBlogs() async {
+    List<Blogs> TrendingBlogList = [];
     try {
       var response = await http.get(Uri.parse(baseURL));
       if (response.statusCode == 200) {
@@ -20,9 +20,9 @@ class BlogData {
             Thumbnail: Blog['thumbnail'],
             Timestamp: Blog['timestamp'],
           );
-          BlogList.add(i);
+          TrendingBlogList.add(i);
         });
-        return BlogList;
+        return TrendingBlogList;
       } else {
         return Future.error("Server Error");
       }

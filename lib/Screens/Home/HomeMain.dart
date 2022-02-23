@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hashstrix_app/API/HomeAPI.dart';
-import 'package:hashstrix_app/Models/HomeModel.dart';
-import 'package:hashstrix_app/Screens/Home/AppBar.dart';
 
 class HomeMain extends StatefulWidget {
   HomeMain({Key? key}) : super(key: key);
@@ -24,7 +22,7 @@ class _HomeMainState extends State<HomeMain> {
             return ListView.builder(
                 itemCount: snapshot.data?.length,
                 itemBuilder: (context, i) {
-                  //Create to separate the ListView BlogsFeed.dart
+                  //Create to separate ListView BlogsFeed.dart for UI
                   return Container(
                     child: Column(
                       children: [
