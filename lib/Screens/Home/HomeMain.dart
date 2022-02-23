@@ -16,6 +16,7 @@ class _HomeMainState extends State<HomeMain> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: EdgeInsets.only(top: 10.0),
       child: FutureBuilder<List>(
         future: blogAPI.getAllBlogs(),
         builder: (context, snapshot) {
@@ -34,7 +35,7 @@ class _HomeMainState extends State<HomeMain> {
                               onPressed: () => {},
                               icon: CircleAvatar(
                                 radius: 80.0,
-                                backgroundColor: const Color(0xFF020079),
+                                backgroundColor: const Color(0xFF2b90d9),
                                 // backgroundImage: NetworkImage(""),
                               ),
                             ),
