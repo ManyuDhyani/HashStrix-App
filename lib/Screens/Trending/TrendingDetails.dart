@@ -34,7 +34,9 @@ class _TrendingDetailsState extends State<TrendingDetails> {
                               icon: CircleAvatar(
                                 radius: 80.0,
                                 backgroundColor: const Color(0xFF2b90d9),
-                                // backgroundImage: NetworkImage(""),
+                                backgroundImage: NetworkImage(
+                                  snapshot.data?[i].ProfilePicture,
+                                ),
                               ),
                             ),
                             Expanded(
@@ -43,7 +45,7 @@ class _TrendingDetailsState extends State<TrendingDetails> {
                                 children: [
                                   Text(
                                     snapshot.data?[i].Title,
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                       fontSize: 20.0,
                                       color: Colors.black,
                                       fontWeight: FontWeight.bold,
@@ -65,12 +67,12 @@ class _TrendingDetailsState extends State<TrendingDetails> {
                             IconButton(
                               iconSize: 30,
                               onPressed: () => {},
-                              icon: Icon(Icons.more_horiz_outlined),
+                              icon: const Icon(Icons.more_horiz_outlined),
                             )
                           ],
                         ),
                         Container(
-                          margin: EdgeInsets.symmetric(horizontal: 10),
+                          margin: const EdgeInsets.symmetric(horizontal: 10),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -99,7 +101,7 @@ class _TrendingDetailsState extends State<TrendingDetails> {
                                 ),
                                 Text(
                                   "12",
-                                  style: TextStyle(fontSize: 18),
+                                  style: const TextStyle(fontSize: 18),
                                 )
                               ],
                             ),
@@ -107,11 +109,11 @@ class _TrendingDetailsState extends State<TrendingDetails> {
                               children: [
                                 IconButton(
                                   onPressed: () => {},
-                                  icon: Icon(Icons.message_outlined),
+                                  icon: const Icon(Icons.message_outlined),
                                 ),
                                 Text(
                                   "20",
-                                  style: TextStyle(fontSize: 18),
+                                  style: const TextStyle(fontSize: 18),
                                 )
                               ],
                             ),

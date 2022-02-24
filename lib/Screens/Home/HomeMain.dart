@@ -34,7 +34,9 @@ class _HomeMainState extends State<HomeMain> {
                               icon: CircleAvatar(
                                 radius: 80.0,
                                 backgroundColor: const Color(0xFF2b90d9),
-                                // backgroundImage: NetworkImage(""),
+                                backgroundImage: NetworkImage(
+                                  snapshot.data?[i].ProfilePicture,
+                                ),
                               ),
                             ),
                             Expanded(

@@ -19,6 +19,8 @@ class BlogData {
             Content: Blog['content'],
             Thumbnail: Blog['thumbnail'],
             Timestamp: Blog['timestamp'],
+            ProfilePicture: Blog['author']['profile_picture'],
+            Verified: Blog['author']['verified'],
           );
           BlogList.add(i);
         });
