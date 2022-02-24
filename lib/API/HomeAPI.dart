@@ -21,6 +21,7 @@ class BlogData {
             Timestamp: Blog['timestamp'],
             ProfilePicture: Blog['author']['profile_picture'],
             Verified: Blog['author']['verified'],
+            Username: Blog['author']['user']['username'],
           );
           BlogList.add(i);
         });

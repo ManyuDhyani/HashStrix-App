@@ -44,8 +44,8 @@ class _HomeMainState extends State<HomeMain> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    snapshot.data?[i].Title,
-                                    style: TextStyle(
+                                    snapshot.data?[i].Username,
+                                    style: const TextStyle(
                                       fontSize: 20.0,
                                       color: Colors.black,
                                       fontWeight: FontWeight.bold,
@@ -67,26 +67,40 @@ class _HomeMainState extends State<HomeMain> {
                             IconButton(
                               iconSize: 30,
                               onPressed: () => {},
-                              icon: Icon(Icons.more_horiz_outlined),
+                              icon: const Icon(Icons.more_horiz_outlined),
                             )
                           ],
                         ),
                         Container(
-                          margin: EdgeInsets.symmetric(horizontal: 10),
+                          margin: const EdgeInsets.symmetric(horizontal: 10),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: Text(
-                                  snapshot.data?[i].Overview,
+                                  snapshot.data?[i].Title,
                                   style: const TextStyle(
-                                      fontSize: 18, color: Colors.black),
+                                    fontSize: 18,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.bold,
+                                  ),
                                 ),
                               ),
                               Image(
-                                  image:
-                                      NetworkImage(snapshot.data?[i].Thumbnail))
+                                image:
+                                    NetworkImage(snapshot.data?[i].Thumbnail),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 8.0),
+                                child: Text(
+                                  snapshot.data?[i].Overview,
+                                  style: const TextStyle(
+                                    fontSize: 18,
+                                    color: Colors.black,
+                                  ),
+                                ),
+                              ),
                             ],
                           ),
                         ),

@@ -7,6 +7,7 @@ class Blogs {
   String Timestamp;
   String ProfilePicture;
   bool Verified;
+  String Username;
 
   Blogs({
     required this.id,
@@ -17,5 +18,6 @@ class Blogs {
     required this.Timestamp,
     required this.ProfilePicture,
     required this.Verified,
+    required this.Username,
   });
 }

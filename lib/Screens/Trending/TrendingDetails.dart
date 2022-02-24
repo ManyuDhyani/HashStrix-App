@@ -44,7 +44,7 @@ class _TrendingDetailsState extends State<TrendingDetails> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    snapshot.data?[i].Title,
+                                    snapshot.data?[i].Username,
                                     style: const TextStyle(
                                       fontSize: 20.0,
                                       color: Colors.black,
@@ -79,14 +79,28 @@ class _TrendingDetailsState extends State<TrendingDetails> {
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: Text(
-                                  snapshot.data?[i].Overview,
+                                  snapshot.data?[i].Title,
                                   style: const TextStyle(
-                                      fontSize: 18, color: Colors.black),
+                                    fontSize: 18,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.bold,
+                                  ),
                                 ),
                               ),
                               Image(
-                                  image:
-                                      NetworkImage(snapshot.data?[i].Thumbnail))
+                                image:
+                                    NetworkImage(snapshot.data?[i].Thumbnail),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 8.0),
+                                child: Text(
+                                  snapshot.data?[i].Overview,
+                                  style: const TextStyle(
+                                    fontSize: 18,
+                                    color: Colors.black,
+                                  ),
+                                ),
+                              ),
                             ],
                           ),
                         ),
@@ -101,7 +115,7 @@ class _TrendingDetailsState extends State<TrendingDetails> {
                                 ),
                                 Text(
                                   "12",
-                                  style: const TextStyle(fontSize: 18),
+                                  style: TextStyle(fontSize: 18),
                                 )
                               ],
                             ),
@@ -109,11 +123,11 @@ class _TrendingDetailsState extends State<TrendingDetails> {
                               children: [
                                 IconButton(
                                   onPressed: () => {},
-                                  icon: const Icon(Icons.message_outlined),
+                                  icon: Icon(Icons.message_outlined),
                                 ),
                                 Text(
                                   "20",
-                                  style: const TextStyle(fontSize: 18),
+                                  style: TextStyle(fontSize: 18),
                                 )
                               ],
                             ),

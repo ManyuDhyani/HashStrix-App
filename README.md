@@ -5,6 +5,6 @@ The Project is in-progress.
 
 ## OverView
 
-<img src="Readme_Images/Addedmainnav.gif" height="600">
+<img src="Readme_Images/MergedUserBlogandAuthorModel.gif" height="600">
 
 
