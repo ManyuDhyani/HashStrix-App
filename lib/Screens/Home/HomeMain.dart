@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hashstrix_app/API/HomeAPI.dart';
+import 'package:hashstrix_app/Screens/BlogDetail/BlogDetail.dart';
 
 class HomeMain extends StatefulWidget {
   HomeMain({Key? key}) : super(key: key);
@@ -131,13 +132,25 @@ class _HomeMainState extends State<HomeMain> {
                                 )
                               ],
                             ),
-                            Row(
-                              children: [
-                                IconButton(
-                                  onPressed: () => {},
-                                  icon: Icon(Icons.share_outlined),
-                                )
-                              ],
+                            ElevatedButton(
+                              onPressed: () {
+                                Navigator.of(context).push(MaterialPageRoute(
+                                    builder: (context) => BlogDetail(
+                                          id: snapshot.data?[i].id,
+                                        )));
+                              },
+                              child: Row(
+                                mainAxisSize: MainAxisSize.min,
+                                children: const [
+                                  Text('Read Blog'),
+                                  Icon(
+                                    Icons.arrow_right,
+                                  ),
+                                ],
+                              ),
+                              style: ElevatedButton.styleFrom(
+                                primary: const Color(0xFF2b90d9),
+                              ),
                             )
                           ],
                         )
