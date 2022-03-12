@@ -136,7 +136,7 @@ class _HomeMainState extends State<HomeMain> {
                               onPressed: () {
                                 Navigator.of(context).push(MaterialPageRoute(
                                     builder: (context) => BlogDetail(
-                                          id: snapshot.data?[i].id,
+                                          slug: snapshot.data?[i].Slug,
                                         )));
                               },
                               child: Row(

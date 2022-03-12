@@ -15,6 +15,7 @@ class BlogData {
           Blogs i = Blogs(
             id: Blog['id'],
             Title: Blog['title'],
+            Slug: Blog['slug'],
             Overview: Blog['overview'],
             Content: Blog['content'],
             Thumbnail: Blog['thumbnail'],

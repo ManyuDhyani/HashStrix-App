@@ -1,6 +1,7 @@
 class Blogs {
   int id;
   String Title;
+  String Slug;
   String Overview;
   String Content;
   String Thumbnail;
@@ -12,6 +13,7 @@ class Blogs {
   Blogs({
     required this.id,
     required this.Title,
+    required this.Slug,
     required this.Overview,
     required this.Content,
     required this.Thumbnail,
